@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Analysis Result{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="analysis-result-container">
+        <h2>Analysis Complete</h2>
+        <div class="result-display">
+            <p>The analysis result is:</p>
+            <div class="result-value">{{ result }}</div>
+            <div class="">{{ message }}</div>
+            <div class="">Fradulant Data:</div>
+            <div class="result-value">{{ fradulant_data }}</div>
+        </div>
+    </div>
+</div>
+{% endblock %}

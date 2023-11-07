@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Fraud Detection{% endblock title %}
+
+{% block content %}
+    <div class="container fraud-detection-container">
+        <div class="file-name">{{ file_name }}</div>
+        <div class="file-content">{{ content }}</div>
+
+        <!-- Form for analysis -->
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="analyze-button">Analyze</button>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Fraud Detection{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h1>Enter Your Crypto Address</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="input-group">
+            <label for="address">Crypto Address:</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter your crypto address here..."></textarea>
+        </div>
+        <div class="input-group">
+            <label for="file">Or upload a dataset of bytecodes:</label>
+            <input type="file" id="file" name="file">
+        </div>
+        <div class="input-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+{% endblock content %}

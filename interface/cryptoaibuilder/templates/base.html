@@ -1,0 +1,37 @@
+<!-- templates/base.html -->
+
+{% load static %} <!-- This tag is necessary to use the static template tag -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Linking the external CSS file -->
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <title>{% block title %}My Django Project{% endblock title %}</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <!-- Navigation bar -->
+        <ul>
+            <li><a href="/fuzzylogic/">Fraud Detection</a></li>
+            <li><a href="/smartcontractauditing/">Smart Contract Auditing</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Main content block where content from child templates will be injected -->
+    {% block content %}
+    {% endblock content %}
+</main>
+
+<!-- <footer>
+    <p></p>
+</footer>  -->
+
+</body>
+</html>
